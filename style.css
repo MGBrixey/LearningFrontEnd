@@ -42,17 +42,22 @@ main img {
   justify-content: center;
 }
 
-.formgroup {
+.formgroup div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formgroup label {
+  flex: 1;
 }
 
 .formgroup input,
 .formgroup select {
-  margin-left: auto;
+  flex: 1;
 }
 
-.grouprow {
+.head {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -141,3 +146,95 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header head {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .formgroup {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .formgroup select,
+  .formgroup input {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    margin: 5px;
+  }
+
+  #about div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #about img {
+    width: 24%;
+    margin: 10px
+    }
+
+  .agroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #ideas {
+    text-align: center;
+  }
+  
+  #ideas .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  #ideas .item {
+    flex-basis: calc(50% - 20px); /* Adjusted for margins */
+    margin: 10px;
+  }
+  
+  #ideas .image {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  #host {
+    text-align: left;
+  }
+  
+  .host-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
+  }
+  
+  .bgroup {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  } 
+}
