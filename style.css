@@ -176,7 +176,7 @@ footer p {
   .formgroup input {
     display: flex;
     flex-direction: row;
-    margin: 3px;
+    margin: 2px;
     width: auto;
   }
 
