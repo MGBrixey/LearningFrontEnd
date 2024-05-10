@@ -115,11 +115,13 @@ form {
 }
 
 form label {
+  display: flex;
   font-weight: bold;
 }
 
 form select,
 form input {
+  display: flex;
   margin-bottom: 20px;
   width: 180px;
 }
@@ -162,14 +164,24 @@ footer p {
   .formgroup {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .formgroup div {
+    display: flex;
+    flex-direction: column;
   }
 
   .formgroup select,
   .formgroup input {
     display: flex;
     flex-direction: row;
-    flex: none;
-    margin: 5px;
+    margin: 3px;
+    width: auto;
+  }
+
+  form button {
+    width: 30%;
   }
 
   #about div {
